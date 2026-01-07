@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+}
+
+textarea {
+    width: 420px;
+}
+
+button {
+    padding: 8px 14px;
+    cursor: pointer;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FNOL Assistant</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <h2>Claim Assistance</h2>
+    <p>I’m here to help. Please describe what happened.</p>
+
+    <textarea id="userMsg" rows="4"></textarea><br /><br />
+    <button onclick="sendMsg()">Send</button>
+
+    <h3>Assistant</h3>
+    <div id="replyBox"></div>
+
+    <br />
+    <a href="/submit">Proceed to claim submission</a>
+
+    <script>
+      function sendMsg() {
+        fetch("/guide", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message: userMsg.value }),
+        })
+          .then((res) => res.json())
+          .then((data) => (replyBox.innerText = data.reply));
+      }
+    </script>
+  </body>
+</html>

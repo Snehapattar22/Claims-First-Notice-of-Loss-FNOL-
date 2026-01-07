@@ -1,0 +1,8 @@
+Extract the following claim details:
+policy_number
+incident_type
+incident_date
+location
+description
+Return the response strictly in valid JSON.
+Do not include explanations or extra text.

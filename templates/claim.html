@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Claim Submission</title>
+</head>
+<body>
+
+<h2>Claim Submission</h2>
+
+<form action="/claim" method="POST" enctype="multipart/form-data">
+
+    <label>Policy Number</label><br>
+    <input type="text" name="policy_number" required><br><br>
+
+    <label>Incident Date</label><br>
+    <input type="date" name="incident_date" required><br><br>
+
+    <label>Incident Location</label><br>
+    <input type="text" name="location" required><br><br>
+
+    <label>Incident Description</label><br>
+    <textarea name="incident_text" rows="5" required></textarea><br><br>
+
+    <label>Upload Document / Image</label><br>
+    <input type="file" name="document" required><br><br>
+
+    <button type="submit">Submit Claim</button>
+
+</form>
+
+</body>
+</html>
